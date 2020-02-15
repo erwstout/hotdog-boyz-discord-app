@@ -1,0 +1,14 @@
+{
+  "name": "hotdog-boyz-discord-app",
+  "version": "0.0.1",
+  "description": "A Discord bot for the HOTDOG BOY Z channel",
+  "main": "index.js",
+  "repository": "git@github.com:erwstout/hotdog-boyz-discord-app.git",
+  "author": "Eric Stout <ericwstout@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^3.2.1"
+  }
+}
