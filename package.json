@@ -19,7 +19,7 @@
     "lint": "eslint ./src/*.ts",
     "types:check": "tsc -p tsconfig.json",
     "test": "yarn format:check && yarn lint && yarn types:check",
-    "deploy": "yarn build && yarn version && git push && git push --tags",
+    "deploy": "yarn build && yarn version && git push && git push --tags"
   },
   "dependencies": {
     "discord.js": "^11.5.1",
