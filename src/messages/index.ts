@@ -2,6 +2,7 @@ import { Message } from "discord.js";
 import includes from "lodash/includes";
 import split from "lodash/split";
 
+import * as config from "../config.json";
 import { hotdogMention } from "./hotdogMention";
 import { help } from "./help";
 
@@ -12,7 +13,10 @@ export const handleMessage = (msg: Message): void => {
     hotdogMention(msg);
   }
 
-  if (msg.content === "!hotdog" || msg.content === "!hotdog help") {
+  if (
+    msg.content === `${config.prefix}hotdog` ||
+    msg.content === `${config.prefix}hotdog help`
+  ) {
     help(msg);
   }
 };
