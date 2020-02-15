@@ -7,8 +7,19 @@
   "author": "Eric Stout <ericwstout@gmail.com>",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "dependencies": {
-    "discord.io": "^2.5.3",
+    "discord.js": "^11.5.1",
+    "lodash": "^4.17.15",
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
   }
 }

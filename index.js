@@ -1,21 +1,22 @@
-var Discord = require('discord.io');
+const Discord = require('discord.js');
+const _ = require('lodash');
+require('dotenv').config();
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
  
-var bot = new Discord.Client({
-    token: DISCORD_TOKEN,
-    autorun: true
+const client = new Discord.Client();
+
+client.login(DISCORD_TOKEN);
+ 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
  
-bot.on('ready', function() {
-    console.log('Logged in as %s - %s\n', bot.username, bot.id);
-});
- 
-bot.on('message', function(user, userID, channelID, message, event) {
-    if (message === "ping") {
-        bot.sendMessage({
-            to: channelID,
-            message: "pong"
-        });
+client.on('message', msg => {
+    const messageContent = _.split(msg.content, ' ');
+
+    if(_.includes(messageContent, "hotdog")) {
+        msg.reply(':hotdog: PLEDGE ALLEGIANCE')
     }
+
 });
