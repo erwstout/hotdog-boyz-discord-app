@@ -5,8 +5,6 @@ require('dotenv').config();
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
  
 const client = new Discord.Client();
-
-client.login(DISCORD_TOKEN);
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -20,3 +18,5 @@ client.on('message', msg => {
     }
 
 });
+
+client.login(DISCORD_TOKEN);
