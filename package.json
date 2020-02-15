@@ -11,8 +11,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "nodemon ./src/index.ts",
     "build": "yarn test && parcel build ./src/index.ts --target node --detailed-report 10 --log-level 3 --no-source-maps --no-cache --out-dir dist/",
     "format:check": "prettier ./src/*.ts --check",
     "format": "prettier ./src/*.ts --write",
@@ -36,6 +35,7 @@
     "eslint": "^6.8.0",
     "nodemon": "^2.0.2",
     "parcel-bundler": "^1.12.4",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "ts-node": "^8.6.2"
   }
 }
