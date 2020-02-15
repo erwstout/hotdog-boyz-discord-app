@@ -16,3 +16,14 @@ blocks:
             - yarn install
             - cache store
             - yarn test
+  - name: Build App
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - sem-version node 12
+            - cache restore
+            - yarn install
+            - cache store
+            - yarn build
