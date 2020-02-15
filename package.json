@@ -13,13 +13,14 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "yarn test && parcel build ./src/src/index.ts --target node --detailed-report 10 --log-level 3 --no-source-maps --no-cache --out-dir dist/",
+    "build": "yarn test && parcel build ./src/index.ts --target node --detailed-report 10 --log-level 3 --no-source-maps --no-cache --out-dir dist/",
     "format:check": "prettier ./src/*.ts --check",
     "format": "prettier ./src/*.ts --write",
     "lint": "eslint ./src/*.ts",
     "types:check": "tsc -p tsconfig.json",
     "test": "yarn format:check && yarn lint && yarn types:check",
-    "deploy": "yarn build && yarn version && git push && git push --tags"
+    "deploy": "yarn build && yarn version && git push && git push --tags",
+    "heroku_postbuild": "yarn build"
   },
   "dependencies": {
     "discord.js": "^11.5.1",
