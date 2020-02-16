@@ -110,7 +110,9 @@ export const lifetimeStatsParser = (
   Wins: **${statsConstructor[2]["Wins"]}**
   Losses: **${statsConstructor[2]["Losses"]}**`);
 
-  msg.reply(`
+  msg
+    .reply(
+      `
   **Game Type: ${statsConstructor[3]["Game Type"]}**
 
   Assists: **${statsConstructor[3]["Assists"]}**
@@ -173,5 +175,9 @@ export const lifetimeStatsParser = (
   Top 10s: **${statsConstructor[5]["Top 10s"]}**
   Wins: **${statsConstructor[5]["Wins"]}**
   Losses: **${statsConstructor[5]["Losses"]}**
-  `);
+  `
+    )
+    .then(() =>
+      console.log(`Sent PUBG Lifetime Stats to ${msg.author.username}`)
+    );
 };

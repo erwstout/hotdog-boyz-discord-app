@@ -25,12 +25,12 @@ export const handleMessage = (msg: Message, clientId: string): void => {
     help(msg);
   }
 
-  console.log("MESSAGE CONTENT ===> ", messageContent);
-  console.log("AUTHOR ==> ", msg.author.id);
-
   // pubg commands
-  console.log(ClientUser);
-  if (msg.author.id !== clientId && includes(messageContent, "pubg")) {
+  if (
+    msg.author.id !== clientId &&
+    includes(messageContent, `${config.prefix}hotdog`) &&
+    includes(messageContent, "pubg")
+  ) {
     console.log("China #1!!!!");
     pubgMention(msg);
   }
