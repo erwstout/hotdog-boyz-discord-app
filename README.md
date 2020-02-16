@@ -8,6 +8,10 @@ HOTDOGBOT is a Discord bot for the HOTDOG BOYZ server. While this code is open s
 
 #### `!hotdog` or `!hotdog help`
 
+#### `!hotdog pubg help`
+
+#### `!hotdog pubg username lifetime`
+
 Sends a message of available commands and features
 
 ## Features
@@ -15,3 +19,7 @@ Sends a message of available commands and features
 - hotdog listener
 
   Listens for the word `hotdog` and adds a 🌭 reaction, as well as a reply to the user who mentioned the word.
+
+- PUBG Stats
+
+  Allows you to get Lifetime stats for your Steam PUBG username. Use `!hotdog pubg help` for usage instructions.
