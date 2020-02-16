@@ -20,7 +20,7 @@ client.on("ready", () => {
 });
 
 client.on("message", (msg: Discord.Message) => {
-  handleMessage(msg);
+  handleMessage(msg, client.user.id);
 });
 
 client.login(NODE_ENV === "production" ? DISCORD_TOKEN : DISCORD_TOKEN_TEST);
